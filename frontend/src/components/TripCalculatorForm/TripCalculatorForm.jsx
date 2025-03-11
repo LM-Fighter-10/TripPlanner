@@ -52,10 +52,10 @@ const TripCalculatorForm = ({ setRoute, drawRoute, setTripLogs, formData,
 
         try {
             const response = await axios.get(proxyUrl);
+            setLoading(false);
 
             if (!response.data.routes || response.data.routes.length === 0) {
                 showMessage("No routes found. Check locations.", null);
-                setLoading(false);
                 return;
             }
 
