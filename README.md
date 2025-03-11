@@ -144,6 +144,12 @@ The React app should open automatically (typically at http://localhost:3000).
    - Additional information (such as addresses from reverse geocoding, total mileage, remarks, and cycle summary) will be displayed.
    - Options for selecting the 70‑hour/8‑day and 60‑hour/7‑day summaries (A, B, or C) are available.
 
+## Video
+
+Watch the demo video to see the Trip Planner in action:
+
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
 ## API Endpoints
 
 ### `POST /proxy-mapbox/`
