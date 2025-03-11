@@ -76,7 +76,7 @@ trip-planner/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/trip-planner.git
+   git clone [https://github.com/yourusername/trip-planner.git](https://github.com/LM-Fighter-10/TripPlanner)
    cd trip-planner/backend
    ```
 
@@ -119,9 +119,7 @@ trip-planner/
 3. **Start the React development server:**
 
    ```bash
-   npm start
-   # or
-   yarn start
+   npm run dev
    ```
 
 The React app should open automatically (typically at http://localhost:3000).
