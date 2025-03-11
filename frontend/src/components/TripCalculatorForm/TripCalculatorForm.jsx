@@ -47,7 +47,7 @@ const TripCalculatorForm = ({ setRoute, drawRoute, setTripLogs, formData,
             return `${lat},${lng}`;
         });
 
-        const proxyUrl = `http://127.0.0.1:8000/proxy-mapbox/?locations=${validLocations.join(";")}&cycle=${formData.current_cycle_used}`;
+        const proxyUrl = `https://tripplanner.pythonanywhere.com/proxy-mapbox/?locations=${validLocations.join(";")}&cycle=${formData.current_cycle_used}`;
         setLoading(true);
 
         try {
