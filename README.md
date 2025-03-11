@@ -149,7 +149,7 @@ The React app should open automatically (typically at http://localhost:3000).
 
 Watch the demo video to see the Trip Planner in action:
 
-[![Watch the video](https://github.com/LM-Fighter-10/TripPlanner/blob/main/Video%20Caption.jpg)](https://www.loom.com/share/584c3d0aab8d41248a02e8b6ec6529be?sid=2b7fe905-f0f7-4915-87d7-9a257aa2789d)
+[![Watch Video](https://cdn.loom.com/sessions/thumbnails/584c3d0aab8d41248a02e8b6ec6529be-00001.gif)](https://www.loom.com/share/584c3d0aab8d41248a02e8b6ec6529be)
 
 ## API Endpoints
 
