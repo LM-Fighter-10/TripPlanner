@@ -31,6 +31,12 @@ const MapApi = ({ setFormData, route, drawRoute, mapRef }) => {
         }
     }, [mapStyle]);
 
+    useEffect(() => {
+        if (mapRef.current && route) {
+            setLoader(false)
+        }
+    }, [route]);
+
     const changeMapStyle = () => {
         setMapStyle(mapStyle === "mapbox://styles/mapbox/streets-v12" ?
             "mapbox://styles/mapbox/satellite-streets-v12"

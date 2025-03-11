@@ -25,7 +25,6 @@ const TripPlanner = () => {
   const [route, setRoute] = useState(null);
   const [messagesList, setMessagesList] = useState([]);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  console.log(formSubmitted)
 
   const drawRoute = (mapRef, routeGeometry) => {
     if (!mapRef.current || !routeGeometry) return;
