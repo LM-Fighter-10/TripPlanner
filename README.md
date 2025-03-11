@@ -38,9 +38,10 @@ trip-planner/
 ├── backend/
 │   ├── manage.py
 │   ├── requirements.txt
-│   ├── project/  # Django project folder
+│   ├── backend/  # Django project folder
 │   │   ├── settings.py
 │   │   ├── urls.py
+│   │   ├── asgi.py
 │   │   └── wsgi.py
 │   └── app/  # Your Django app containing:
 │       ├── views.py  # Contains proxy_mapbox and generate_log_sheets functions
