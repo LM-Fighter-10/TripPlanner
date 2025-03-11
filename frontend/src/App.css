@@ -1,0 +1,334 @@
+.map-log-container {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+#map {
+    user-select: none;
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 10px 0 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.daily-log-container {
+    padding: 24px;
+    border-radius: 20px;
+    border: solid #7c7777;
+    box-shadow: 0 0 7px 0px #0000006e;
+}
+
+.log-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+/* Title Section */
+.log-first-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.log-title {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    min-width: fit-content;
+    font-family: Arial, sans-serif;
+}
+
+.log-title h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 12px;
+}
+
+.street-button {
+    background-image: url('/satellite.jpg');
+}
+
+.satellite-button {
+    background-image: url('/map.jpg');
+}
+
+.satellite-button span, .street-button span {
+    position: relative;
+    bottom: -30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.satellite-button:hover span, .street-button:hover span {
+    bottom: 0;
+}
+
+.satellite-button, .street-button {
+    overflow: hidden;
+    user-select: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    border: solid #7674742e;
+    box-shadow: 0 0 6px #00000094;
+    color: white;
+    font-weight: bold;
+    background-size: contain;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Date Section */
+.date-section {
+    display: flex;
+    align-items: center;
+}
+
+.date-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.date-divider {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.date-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.mileage-address-container {
+    display: flex;
+    gap: 20px;
+}
+
+.mileage-section {
+    display: flex;
+    flex: 0.5;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 180px;
+}
+
+.mileage-section div:nth-child(3) {
+    align-items: center;
+}
+
+.mileage-section div:nth-child(3) div {
+    overflow-y: auto;
+}
+
+.mileage-section div:nth-child(3) label {
+    width: 70%;
+}
+
+.mileage-section .short-input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    flex: 1 !important;
+    overflow: hidden;
+    padding: 5px;
+    max-height: 40px;
+    justify-content: center;
+}
+
+.mileage-section div:nth-child(1), .mileage-section div:nth-child(2) {
+    height: 70px;
+}
+
+.mileage-section div:nth-child(3) {
+    height: 89px;
+}
+
+.log-remarks {
+    border: 1px solid #000;
+    padding: 5px;
+    height: 100px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+.address-section {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.shipping-docs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mileage-section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mileage-section div:nth-child(1), .mileage-section div:nth-child(2) {
+    flex: 0.5;
+}
+
+/* Filing Instructions */
+.filing-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.filing-info span {
+    text-align: left;
+}
+
+/* From and To Section */
+.from-to-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.from-to {
+    display: flex;
+    align-items: center;
+    width: 45%;
+}
+
+.from-to label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.input-line {
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    height: auto;
+}
+
+.log-date-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.log-date-field {
+    display: flex;
+    width: 80px;
+}
+
+.log-date-label {
+    text-align: center;
+}
+
+.recap-title {
+    text-align: left;
+    margin-bottom: 5px !important;
+}
+
+.recap-container {
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 !important;
+}
+
+.selectable {
+    /*cursor: pointer;*/
+    text-align: center;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.selectable.hovered {
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.selectable.selected {
+    background-color: rgba(0, 0, 255, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.reset-btn {
+    padding: 8px 15px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reset-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+    background-color: #d9534f !important;
+}
+
+.reset-btn:hover {
+    background-color: #c9302c;
+}
+
+.log-table-body-row, .log-table-heading-row {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #00000045;
+}
+
+.log-table-body-row > td, .log-table-heading-row > th {
+    border-right: 2px #00000045 solid;
+}
+
+.log-table-heading-row > th {
+    background: #80808038;
+    text-align: center;
+}
+
+.log-table-body-row > td > div {
+    vertical-align: top;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    display: table-cell;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+    text-align: left;
+    padding: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.log-table-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
