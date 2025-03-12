@@ -43,8 +43,8 @@ const TripCalculatorForm = ({ setRoute, drawRoute, setTripLogs, formData,
         ];
 
         const validLocations = locations.map(loc => {
-            const [lat, lng] = loc.split(",").map(Number);
-            return `${lat},${lng}`;
+            const [lng, lat] = loc.split(",").map(Number);
+            return `${lng},${lat}`;
         });
 
         const proxyUrl = `https://tripplanner.pythonanywhere.com/proxy-mapbox/?locations=${validLocations.join(";")}&cycle=${formData.current_cycle_used}`;
@@ -64,7 +64,7 @@ const TripCalculatorForm = ({ setRoute, drawRoute, setTripLogs, formData,
             drawRoute(mapRef, response.data.routes[0]);
             setTripLogs(response.data.trip_logs || []);
         } catch (error) {
-            showMessage(error.response?.data?.message || "Failed to fetch route.", true);
+            showMessage(error.response?.data?.error || "Failed to fetch route.", true);
         } finally {
             setLoading(false);
         }
@@ -74,17 +74,17 @@ const TripCalculatorForm = ({ setRoute, drawRoute, setTripLogs, formData,
     return (
         <>
             <Typography variant="h4" gutterBottom>🚛 Trip Calculator</Typography>
-            <TextField label="Current Location (lat,lng)"
+            <TextField label="Current Location (lng,lat)"
                        name="current_location" fullWidth margin="normal"
                        inputRef={currentRef}
                        onKeyDown={(e) => handleKeyDown(e, pickupRef)}
                        value={formData.current_location} onChange={handleChange}/>
-            <TextField label="Pickup Location (lat,lng)"
+            <TextField label="Pickup Location (lng,lat)"
                        name="pickup_location" fullWidth margin="normal"
                        inputRef={pickupRef}
                        onKeyDown={(e) => handleKeyDown(e, dropoffRef)}
                        value={formData.pickup_location} onChange={handleChange}/>
-            <TextField label="Dropoff Location (lat,lng)"
+            <TextField label="Dropoff Location (lng,lat)"
                        inputRef={dropoffRef}
                        onKeyDown={(e) => handleKeyDown(e, cycleRef)}
                        name="dropoff_location" fullWidth margin="normal"
