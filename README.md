@@ -2,6 +2,11 @@
 
 Trip Planner is a full‑stack web application that calculates Electronic Logging Device (ELD) trip logs based on the Federal Motor Carrier Safety Administration (FMCSA) Hours‑of‑Service (HOS) regulations. The project uses the Mapbox Directions API to generate routes, reverse‑geocodes pickup/dropoff coordinates into addresses, and computes daily logs (driving, on‑duty, off‑duty, and sleeper hours) with a 24‑cell grid (each hour subdivided into 15‑minute increments). It also allows the user to select between 70‑hour/8‑day and 60‑hour/7‑day cycle options (A, B, or C) as part of the recap.
 
+## Live Demo
+
+🚀 **Try the Trip Planner App Here:**  
+[🔗 Click to Open](https://trip-planner-frontend-tau.vercel.app/)  
+
 ## Table of Contents
 
 - [Features](#features)
@@ -149,7 +154,7 @@ The React app should open automatically (typically at http://localhost:3000).
 
 Watch the demo video to see the Trip Planner in action:
 
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.loom.com/share/584c3d0aab8d41248a02e8b6ec6529be?sid=2b7fe905-f0f7-4915-87d7-9a257aa2789d)
+[![Watch Video](https://cdn.loom.com/sessions/thumbnails/584c3d0aab8d41248a02e8b6ec6529be-0c8f4b4990778aa8-full-play.gif)](https://www.loom.com/share/584c3d0aab8d41248a02e8b6ec6529be?sid=633273c8-7e11-4e2b-b484-6d75bc3842ec)
 
 ## API Endpoints
 
