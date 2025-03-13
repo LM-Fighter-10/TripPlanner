@@ -12,6 +12,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export const MessageContext = createContext();
+const MAPBOX_TOKEN = "pk.eyJ1IjoiZmlnaHRlci0xMCIsImEiOiJjbTgwN2Y4YzcwcWpmMmpzYWJiOHlxN2U1In0.qQm20AenfEZmnr_VNRDTTA";
 
 const TripPlanner = () => {
   const [formData, setFormData] = useState({
@@ -100,13 +101,13 @@ const TripPlanner = () => {
   };
 
   return (
-      <MessageContext.Provider value={{showMessage}}>
+      <MessageContext.Provider value={{showMessage, MAPBOX_TOKEN}}>
         <Container maxWidth="md" style={{marginTop: "20px", textAlign: "center"}}>
           <ToastContainer style={{width: "fit-content"}}/>
           <Collapse in={!formSubmitted} timeout={500}>
             <TripCalculatorForm drawRoute={drawRoute} setRoute={setRoute} setTripLogs={setTripLogs}
-                                setFormData={setFormData} formData={formData} formSubmitted={formSubmitted}
-                                mapRef={mapRef} setFormSubmitted={setFormSubmitted}/>
+                                setFormData={setFormData} formData={formData} mapRef={mapRef}
+                                setFormSubmitted={setFormSubmitted}/>
           </Collapse>
           <Collapse in={formSubmitted} timeout={500}>
             <span>
@@ -125,7 +126,7 @@ const TripPlanner = () => {
                   Back to Form
                 </Button>
               </div>
-              <MapApi route={route} setFormData={setFormData} drawRoute={drawRoute} mapRef={mapRef}/>
+              <MapApi route={route} drawRoute={drawRoute} mapRef={mapRef}/>
               <DriverLog tripLogs={tripLogs}/>
             </span>
           </Collapse>

@@ -1,13 +1,13 @@
-import {useEffect, useState, useRef} from "react";
+import {useEffect, useState, useRef, useContext} from "react";
 import mapboxgl from "mapbox-gl";
 import Loader from "../Loader/Loader.jsx";
+import {MessageContext} from "../TripPlanner";
 
-const MAPBOX_TOKEN = "pk.eyJ1IjoiZmlnaHRlci0xMCIsImEiOiJjbTgwN2Y4YzcwcWpmMmpzYWJiOHlxN2U1In0.qQm20AenfEZmnr_VNRDTTA";
-
-const MapApi = ({ setFormData, route, drawRoute, mapRef }) => {
+const MapApi = ({ route, drawRoute, mapRef }) => {
     const [mapStyle, setMapStyle] = useState("mapbox://styles/mapbox/streets-v12");
     const mapContainerRef = useRef(null);
     const [loader, setLoader] = useState(true);
+    const { MAPBOX_TOKEN } = useContext(MessageContext);
 
     useEffect(() => {
         setLoader(true)
